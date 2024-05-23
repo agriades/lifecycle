@@ -7,10 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 // onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy()
 class MainActivity : AppCompatActivity() {
 
+    val et = findViewById<EditText>(R.id.et)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val et = findViewById<EditText>(R.id.et)
     }
 
     override fun onStart() {
