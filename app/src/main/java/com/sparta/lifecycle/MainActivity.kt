@@ -10,7 +10,6 @@ import com.sparta.lifecycle.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private val viewModel = ViewModelProvider(this)[MainViewModel::class.java] //가 정석 형식.
 //    val viewModel = MainViewModel by viewModels() by viewModels는 build.gradle에 라이브러리 디펜던시를 추가해야 함.
-
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     //private var input = Variables.input
 
