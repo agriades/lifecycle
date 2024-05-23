@@ -1,5 +1,5 @@
 package com.sparta.lifecycle
 
-class Variables {
+object Variables {
     lateinit var input: String
 }
