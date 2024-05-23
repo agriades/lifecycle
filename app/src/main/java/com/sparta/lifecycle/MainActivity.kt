@@ -10,12 +10,14 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     lateinit var et: EditText
-    lateinit var input: String
+    var input: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         et = findViewById<EditText>(R.id.et)
+
+        et.setText(input)
     }
 
     override fun onStop() {
