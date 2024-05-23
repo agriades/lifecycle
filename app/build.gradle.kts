@@ -7,6 +7,10 @@ android {
     namespace = "com.sparta.lifecycle"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.sparta.lifecycle"
         minSdk = 24
