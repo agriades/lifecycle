@@ -6,7 +6,7 @@ import com.sparta.lifecycle.databinding.ActivityMainBinding
 
 // onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy()
 
-private lateinit var binding: ActivityMainBinding
+lateinit var binding: ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
