@@ -8,24 +8,26 @@ import com.sparta.lifecycle.databinding.ActivityMainBinding
 
 // onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy()
 class MainActivity : AppCompatActivity() {
-//    val viewModel = ViewModelProvider(this)[MainViewModel::class.java] 가 정석 방식.
+    private val viewModel = ViewModelProvider(this)[MainViewModel::class.java] //가 정석 형식.
 //    val viewModel = MainViewModel by viewModels() by viewModels는 build.gradle에 라이브러리 디펜던시를 추가해야 함.
-    val viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-    private var input = Variables.input
+    //private var input = Variables.input
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.et.setText(input)//출력 시에는 binding.et.text가 가능하지만, 반대는 안된다.
+        //binding.et.setText(input)//출력 시에는 binding.et.text가 가능하지만, 반대는 안된다.
 
-        //ViewModel 적용 구간
+        //ViewModel observe 적용 구간
+        viewModel.textInput.observe(this) {input ->
+            Log.d("agriades", input) }
     }
 
     override fun onStop() {
             super.onStop()
-            input = binding.et.text.toString()
-            Log.d("agriades", input)
+            //input = binding.et.text.toString()
+            //Log.d("agriades", input)
         }
 
 }
