@@ -9,7 +9,7 @@ import com.sparta.lifecycle.databinding.ActivityMainBinding
 // onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy()
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-    lateinit var input: String
+    var input: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
