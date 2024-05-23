@@ -8,7 +8,7 @@ import com.sparta.lifecycle.databinding.ActivityMainBinding
 // onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy()
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-    private val input = Variables.input
+    private var input = Variables.input
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStop() {
             super.onStop()
-            Variables.input = binding.et.text.toString()
+            input = binding.et.text.toString()
             Log.d("agriades", input)
         }
 
