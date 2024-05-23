@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.sparta.lifecycle.databinding.ActivityMainBinding
 
 // onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy()
-
-lateinit var binding: ActivityMainBinding
-
 class MainActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
