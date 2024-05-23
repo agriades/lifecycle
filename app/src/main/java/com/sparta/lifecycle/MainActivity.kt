@@ -8,8 +8,6 @@ import com.sparta.lifecycle.databinding.ActivityMainBinding
 
 // onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy()
 class MainActivity : AppCompatActivity() {
-//    private val viewModel = ViewModelProvider(this)[MainViewModel::class.java] //가 정석 형식.
-////    val viewModel = MainViewModel by viewModels() by viewModels는 build.gradle에 라이브러리 디펜던시를 추가해야 함.
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     //private var input = Variables.input
 
@@ -20,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         //ViewModel observe 적용 구간
         val viewModel = ViewModelProvider(this)[MainViewModel::class.java] //가 정석 형식.
+        //val viewModel = MainViewModel by viewModels() by viewModels는 build.gradle에 라이브러리 디펜던시를 추가해야 함.
         viewModel.textInput.observe(this) {textInput ->
             Log.d("agriades", textInput) }
     }
