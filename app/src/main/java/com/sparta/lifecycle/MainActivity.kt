@@ -1,13 +1,14 @@
 package com.sparta.lifecycle
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
 // onCreate(), onStart(), onResume(), onPause(), onStop(), and onDestroy()
 class MainActivity : AppCompatActivity() {
 
-    val et = findViewById<EditText>(R.id.et)
+//    val et = findViewById<EditText>(R.id.et)
     lateinit var input: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +18,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        input = et.text.toString()
+        input = "hello!" //et.text.toString()
+        Log.d("agriades", input)
     }
 
 }
