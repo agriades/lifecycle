@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
+        Variables.input = R.id.et
     }
 
     override fun onDestroy() {
