@@ -1,5 +1,7 @@
 package com.sparta.lifecycle
 
-object Variables {
-    var input = ""
+class Variables {
+    companion object {
+        var input: String = ""
+    }
 }
