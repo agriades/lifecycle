@@ -16,12 +16,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         et = findViewById<EditText>(R.id.et)
-        input = et.text.toString() //et.text.toString()
     }
 
     override fun onStop() {
         super.onStop()
         Log.d("agriades", input)
+        input = et.text.toString() //et.text.toString()
     }
 
 }
